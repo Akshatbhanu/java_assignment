@@ -57,8 +57,19 @@ public class StudentService
 	public void calculateGPA(int id)
 	{
 		
-		float d=s[id].getM1()/3.0f+s[id].getM2()/2.0f+s[id].getM3()/4.0f;
-		System.out.println(d);
+		for(int i=0;i<cnt;i++)
+		{ 
+		
+			if(s[i].getStudentId()==id)
+			{
+				float d=s[i].getM1()/3.0f+s[i].getM2()/2.0f+s[i].getM3()/4.0f;
+				System.out.println(d);
+				return ;
+			}
+			
+		}
+		
+		System.out.println("Student not found ...... ");
 		
 	}
 	
